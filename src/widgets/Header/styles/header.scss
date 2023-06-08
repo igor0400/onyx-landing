@@ -1,0 +1,21 @@
+@import '../../../app/styles/variables.scss';
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #242431;
+}
+
+.header {
+  height: $headerHeight;
+  min-width: $minWidth;
+  @media (max-width: 640px) {
+    height: $headerHeight640;
+  }
+  @media (max-width: 425px) {
+    height: $headerHeight425;
+  }
+}
