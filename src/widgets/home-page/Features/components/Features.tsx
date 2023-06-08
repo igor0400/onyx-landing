@@ -13,7 +13,7 @@ const Features: FC = () => {
       </p>
       <div className="flex flex-col gap-10">
         {cards.map((item) => (
-          <FeaturesCard {...item} />
+          <FeaturesCard {...item} key={item.title} />
         ))}
       </div>
     </div>

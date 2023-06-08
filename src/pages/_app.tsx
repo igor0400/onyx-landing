@@ -6,7 +6,7 @@ import Footer from '../widgets/Footer';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className="wrapper min-max-width">
+    <div className="wrapper">
       <Header />
       <main>
         <Component {...pageProps} />

@@ -6,7 +6,7 @@ import Title from '../widgets/home-page/Title';
 
 export default function Home() {
   return (
-    <PageWrapper>
+    <PageWrapper withMinMax={false}>
       <Title />
       <Cards />
       <Features />

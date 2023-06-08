@@ -1,12 +1,14 @@
 import Head from 'next/head';
 import { FC, ReactNode } from 'react';
+import classNames from 'classnames';
 
 interface Props {
   children: ReactNode;
+  withMinMax?: boolean;
   title?: string;
 }
 
-const PageWrapper: FC<Props> = ({ children, title }) => {
+const PageWrapper: FC<Props> = ({ children, title, withMinMax = true }) => {
   return (
     <>
       <Head>
@@ -21,7 +23,13 @@ const PageWrapper: FC<Props> = ({ children, title }) => {
         <title>{title ?? 'ONYX'}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="h-full">{children}</div>
+      <div
+        className={classNames('h-full', {
+          'min-max-width': withMinMax,
+        })}
+      >
+        {children}
+      </div>
     </>
   );
 };
