@@ -4,7 +4,7 @@ import { cards } from '../configs/cards';
 
 const Features: FC = () => {
   return (
-    <div className="max-w-6xl mx-auto mt-36 max-xl:px-10">
+    <div className="max-w-[1220px] mx-auto mt-36 max-xl:px-10">
       <h3 className="uppercase text-3xl font-bold">
         Функционал и возможности Onyx
       </h3>

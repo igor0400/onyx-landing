@@ -9,10 +9,7 @@ interface Props {
 
 const Card: FC<Props> = ({ index, iconUrl, text }) => {
   return (
-    <div
-      className="p-6 rounded-2xl w-[280px] h-[320px] flex flex-col justify-between"
-      style={{ background: '#242431' }}
-    >
+    <div className="p-6 rounded-2xl w-[280px] h-[320px] flex flex-col justify-between assent-bg">
       <h6 className="opacity-20 text-5xl">{index}</h6>
       <Image src={iconUrl} alt="icon" />
       <p className="opacity-90 text-lg">{text}</p>

@@ -7,6 +7,7 @@ interface CardType {
   description: string;
   imageUrl: any;
   float: 'left' | 'right';
+  marginTop?: number;
 }
 
 export const cards: CardType[] = [
@@ -16,6 +17,7 @@ export const cards: CardType[] = [
       'Клиентская оболочка не влияет на прозиводительность компьютера. Безопасность клиентской оболочки снижает риски от воздействия на систему из вне',
     imageUrl: screen1,
     float: 'left',
+    marginTop: 10,
   },
   {
     title: 'Контроль и управление',

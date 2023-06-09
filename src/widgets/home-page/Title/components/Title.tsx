@@ -10,7 +10,7 @@ const Title: FC = () => {
         background: `url(${background.src}) 100% 100% / 100%  no-repeat`,
       }}
     >
-      <div className="uppercase flex flex-col justify-center items-center full-height pb-14 w-full h-full max-w-6xl mx-auto">
+      <div className="uppercase flex flex-col justify-center items-center full-height pb-14 w-full h-full max-w-[1220px] mx-auto">
         <h1 className="logo text-[400px] leading-[240px] pt-12 pb-6">onyx</h1>
         <p className="text-4xl">Мир меняет правила, мы - создаем</p>
       </div>

@@ -1,7 +1,12 @@
 import classNames from 'classnames';
-import React, { CSSProperties, FC, ReactNode } from 'react';
+import React, {
+  ButtonHTMLAttributes,
+  CSSProperties,
+  FC,
+  ReactNode,
+} from 'react';
 
-interface Props {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   style?: CSSProperties;
   children: ReactNode;
@@ -17,16 +22,17 @@ const Button: FC<Props> = ({
   bgColor,
   borderColor,
   onClick,
+  ...args
 }) => {
   return (
     <button
-      className={classNames('uppercase rounded-md py-2.5 px-12', {
+      className={classNames('uppercase rounded-md py-2.5 px-12 text-sm', {
         [className ?? '']: className,
-        [`bg-${bgColor}`]: bgColor,
-        [`border border-${borderColor}`]: borderColor,
+        border: borderColor,
       })}
-      style={style}
+      style={{ ...style, background: bgColor }}
       onClick={onClick}
+      {...args}
     >
       {children}
     </button>

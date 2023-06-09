@@ -4,7 +4,7 @@ import Card from '../../../../entities/home-page/Card';
 
 const Cards: FC = () => {
   return (
-    <div className="max-w-6xl mx-auto mt-36 max-xl:px-10">
+    <div className="max-w-[1220px] mx-auto mt-36 max-xl:px-10">
       <h3 className="uppercase text-3xl font-bold">Следите, управляйте</h3>
       <p className="opacity-50 font-light max-w-lg mt-3">
         Управляйте заведением в режиме реального времени и отслеживайте всю
