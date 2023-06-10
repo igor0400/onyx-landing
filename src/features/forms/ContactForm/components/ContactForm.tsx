@@ -3,6 +3,8 @@ import { Button, Input } from '../../../../shared';
 import classNames from 'classnames';
 import Link from 'next/link';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTranslate } from '../../../locale';
+import { contactsSettings } from '../../../../widgets/home-page/Contacts';
 
 interface Props {
   className?: string;
@@ -11,6 +13,7 @@ interface Props {
 const ContactForm: FC<Props> = ({ className }) => {
   const isLargerThan1024 = useMediaQuery('(min-width: 1024px)');
   const isLargerThan350 = useMediaQuery('(min-width: 350px)');
+  const { t } = useTranslate(contactsSettings);
 
   return (
     <form
@@ -30,9 +33,12 @@ const ContactForm: FC<Props> = ({ className }) => {
           }, 1fr))`,
         }}
       >
-        <Input placeholder="Введите имя" className="w-full sm:min-w-[240px]" />
         <Input
-          placeholder="Введите город"
+          placeholder={t('inputs').name}
+          className="w-full sm:min-w-[240px]"
+        />
+        <Input
+          placeholder={t('inputs').city}
           className="w-full sm:min-w-[240px]"
         />
       </div>
@@ -49,18 +55,18 @@ const ContactForm: FC<Props> = ({ className }) => {
         }}
       >
         <Input
-          placeholder="Введите Email"
+          placeholder={t('inputs').email}
           type="email"
           className="w-full sm:min-w-[240px]"
         />
         <Input
-          placeholder="Введите номер телефона"
+          placeholder={t('inputs').phone}
           type="phone"
           className="w-full sm:min-w-[240px]"
         />
       </div>
 
-      <Input placeholder="Введите название клуба" className="w-full" />
+      <Input placeholder={t('inputs').clubName} className="w-full" />
 
       <div
         className={
@@ -75,34 +81,34 @@ const ContactForm: FC<Props> = ({ className }) => {
         }}
       >
         <Input
-          placeholder="Введите количество клубов"
+          placeholder={t('inputs').clubsCount}
           type="number"
           className="w-full sm:min-w-[240px]"
         />
         <Input
-          placeholder="Введите количество ПК"
+          placeholder={t('inputs').pcsCount}
           type="number"
           className="w-full sm:min-w-[240px]"
         />
       </div>
 
-      <Input placeholder="Коментарий" className="w-full" />
+      <Input placeholder={t('inputs').comment} className="w-full" />
 
       <div className="text-center">
-        <p className="opacity-70">Отправляя форму, вы принимаете правила</p>
+        <p className="opacity-70">{t('info')}</p>
         <div style={{ color: 'rgba(239, 63, 84, 1)' }}>
           <Link href="/" className="underline">
-            Политики использования
+            {t('rools1')}
           </Link>{' '}
-          и{' '}
+          {t('and')}{' '}
           <Link href="/" className="underline">
-            Лицензионного соглашения
+            {t('rools2')}
           </Link>
         </div>
       </div>
 
       <Button bgColor="#EF3F54" type="submit">
-        Отправить
+        {t('button')}
       </Button>
     </form>
   );

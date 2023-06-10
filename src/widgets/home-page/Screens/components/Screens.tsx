@@ -1,13 +1,15 @@
 import React, { FC } from 'react';
-import { screens } from '../configs/screens';
 import ScreensCard from '../../../../entities/home-page/ScreensCard';
+import { useTranslate } from '../../../../features/locale';
 
 import background from 'public/images/bg-lines.png';
 import backgroundBlur from 'public/images/bg-lines-blur.png';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import settings from '../model/locale/translate';
 
 const Screens: FC = () => {
   const isLargerThan1600 = useMediaQuery('(min-width: 1600px)');
+  const { t } = useTranslate(settings);
 
   return (
     <div
@@ -20,7 +22,7 @@ const Screens: FC = () => {
         backgroundRepeat: 'no-repeat, no-repeat',
       }}
     >
-      {screens.map((item, i) => (
+      {t('screens').map((item: any, i: number) => (
         <ScreensCard
           {...item}
           id={i}

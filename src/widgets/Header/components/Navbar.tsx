@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
-import { navs } from '../configs/navs';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import { useTranslate } from '../../../features/locale';
+
+import settings from '../model/locale/translate.json';
 
 interface Props {
   className?: string;
@@ -8,6 +10,8 @@ interface Props {
 }
 
 const Navbar: FC<Props> = ({ className, onCloseModal }) => {
+  const { t } = useTranslate(settings);
+
   const closeModal = () => {
     if (onCloseModal) onCloseModal();
   };
@@ -15,7 +19,7 @@ const Navbar: FC<Props> = ({ className, onCloseModal }) => {
   return (
     <nav className={className}>
       <ul className="flex max-xl:flex-col gap-5 uppercase font-light">
-        {navs.map(({ title, link }) => (
+        {t('navs').map(({ title, link }: any) => (
           <React.Fragment key={title}>
             {link === '/' ? (
               <div

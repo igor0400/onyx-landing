@@ -1,0 +1,14 @@
+{
+  "ru": {
+    "title": "Получайте первым информацию о внедрении новых бесплатных модулях",
+    "description": "Получайте информацию о новых функциях, модулях и новостях, подписавшись на рассылку.",
+    "inputText": "Введите Email",
+    "button": "Подписаться"
+  },
+  "en": {
+    "title": "Receive the first information about the introduction of new free modules",
+    "description": "Get information about new features, modules and news by subscribing to the newsletter.",
+    "inputText": "Enter Email",
+    "button": "Subscribe"
+  }
+}

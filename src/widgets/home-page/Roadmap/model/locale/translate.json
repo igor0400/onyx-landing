@@ -1,0 +1,44 @@
+{
+  "ru": {
+    "title": "Дорожная карта",
+    "description": "Узнайте больше о развитии продукта — постоянно выпускаем для вас новые функции и модули.",
+    "slides": [
+      {
+        "text": "Разработка демо-версии. <b>Результат – готово.</b>"
+      },
+      {
+        "text": "Проработка основного функционала программы и тест на клубах сети Local и Quantum. <b>Результат – готово.</b>"
+      },
+      {
+        "text": "Начало продаж. Результат – IV квартал 2022 года"
+      },
+      {
+        "text": "Таск-менеджер. Мобильное приложение. Результат – IV квартал 2023 года"
+      },
+      {
+        "text": "Турнирный модуль.Результат – IV квартал 2023 года"
+      }
+    ]
+  },
+  "en": {
+    "title": "Roadmap",
+    "description": "Learn more about product development - constantly releasing new features and modules for you.",
+    "slides": [
+      {
+        "text": "Development of the demo version. <b>The result is ready.</b>"
+      },
+      {
+        "text": "Working out the basic functionality of the program and test on the clubs of the Local and Quantum network. <b>The result is ready.</b>"
+      },
+      {
+        "text": "Start of sales. Result - Q4 2022"
+      },
+      {
+        "text": "Tusk manager. Mobile app. Result - Q4 2023"
+      },
+      {
+        "text": "Tournament module. Result - IV quarter of 2023"
+      }
+    ]
+  }
+}

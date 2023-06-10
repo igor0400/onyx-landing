@@ -1,0 +1,38 @@
+{
+  "ru": {
+    "title": "Оставить заявку",
+    "inputs": {
+      "name": "Введите имя",
+      "city": "Введите город",
+      "email": "Введите Email",
+      "phone": "Введите номер телефона",
+      "clubName": "Введите название клуба",
+      "clubsCount": "Введите количество клубов",
+      "pcsCount": "Введите количество ПК",
+      "comment": "Коментарий"
+    },
+    "info": "Отправляя форму, вы принимаете правила",
+    "rools1": "Политики использования",
+    "and": "и",
+    "rools2": "Лицензионного соглашения",
+    "button": "Отправить"
+  },
+  "en": {
+    "title": "Leave a request",
+    "inputs": {
+      "name": "Enter a name",
+      "city": "Enter a city",
+      "email": "Enter Email",
+      "phone": "Enter phone number",
+      "clubName": "Enter club name",
+      "clubsCount": "Enter the number of clubs",
+      "pcsCount": "Enter the number of PCs",
+      "comment": "Comment"
+    },
+    "info": "By submitting the form, you accept the rules",
+    "rools1": "Usage policies",
+    "and": "and",
+    "rools2": "License Agreement",
+    "button": "Send"
+  }
+}

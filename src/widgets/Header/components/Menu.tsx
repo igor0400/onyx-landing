@@ -5,6 +5,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import Navbar from './Navbar';
 import Toolbar from './Toolbar';
 import { Drawer } from '@mui/material';
+import { useTranslate } from '../../../features/locale';
+
+import settings from '../model/locale/translate.json';
 
 interface Props {
   className?: string;
@@ -13,6 +16,8 @@ interface Props {
 }
 
 const Menu: FC<Props> = ({ isMenuOpen, setIsMenuOpen, className }) => {
+  const { t } = useTranslate(settings);
+
   const onClose = () => setIsMenuOpen(false);
   const onOpen = () => setIsMenuOpen(true);
 
@@ -20,7 +25,7 @@ const Menu: FC<Props> = ({ isMenuOpen, setIsMenuOpen, className }) => {
     <>
       <MenuIcon className={className} onClick={onOpen} />
       <Drawer
-        title="Навигация"
+        title={t('navTitle')}
         anchor="right"
         onClose={onClose}
         open={isMenuOpen}

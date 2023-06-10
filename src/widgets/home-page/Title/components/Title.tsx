@@ -2,9 +2,13 @@ import React, { FC } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import background from 'public/images/background.jpg';
+import { useTranslate } from '../../../../features/locale';
+
+import settings from '../model/locale/translate.json';
 
 const Title: FC = () => {
   const isLargerThan1400 = useMediaQuery('(min-width: 1400px)');
+  const { t } = useTranslate(settings);
 
   return (
     <div
@@ -21,7 +25,7 @@ const Title: FC = () => {
           onyx
         </h1>
         <p className="text-sm sm:text-lg md:text-xl lg:text-3xl min-[1500px]:text-4xl">
-          Мир меняет правила, мы - создаем
+          {t('slogan')}
         </p>
       </div>
     </div>

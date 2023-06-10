@@ -1,15 +1,18 @@
 import React, { FC } from 'react';
-import { slides } from '../configs/slides';
 import RoadmapSliderCard from '../../../../entities/home-page/RoadmapSliderCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import SlideArrows from './SlideArrows';
+import { useTranslate } from '../../../../features/locale';
+
+import settings from '../model/locale/translate.json';
 
 const Slider: FC = () => {
   const isLargerThan1220 = useMediaQuery('(min-width: 1220px)');
   const isLargerThan1024 = useMediaQuery('(min-width: 1024px)');
   const isLargerThan800 = useMediaQuery('(min-width: 800px)');
   const isLargerThan640 = useMediaQuery('(min-width: 640px)');
+  const { t } = useTranslate(settings);
 
   return (
     <Swiper
@@ -29,7 +32,7 @@ const Slider: FC = () => {
       }
     >
       <div className="items-end flex">
-        {slides.map((item, i) => (
+        {t('slides').map((item: any, i: number) => (
           <SwiperSlide key={i} style={{ width: isLargerThan640 ? 280 : 240 }}>
             {({ isActive }) => (
               <RoadmapSliderCard {...item} index={i + 1} isActive={isActive} />
