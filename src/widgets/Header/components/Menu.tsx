@@ -34,7 +34,7 @@ const Menu: FC<Props> = ({ isMenuOpen, setIsMenuOpen, className }) => {
           style={{ color: '#fff' }}
           onClick={onClose}
         />
-        <Navbar className="mt-6 w-fit" />
+        <Navbar className="mt-6 w-fit" onCloseModal={onClose} />
         <Toolbar className="sm:hidden mt-5 flex flex-col gap-5" />
       </Drawer>
     </>
