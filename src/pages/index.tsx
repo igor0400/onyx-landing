@@ -1,7 +1,7 @@
 import { PageWrapper } from '../shared';
 import Benefits from '../widgets/home-page/Benefits';
 import Cards from '../widgets/home-page/Cards';
-import ContactForm from '../widgets/home-page/ContactForm';
+import Contacts from '../widgets/home-page/Contacts';
 import Features from '../widgets/home-page/Features';
 import Partners from '../widgets/home-page/Partners';
 import Roadmap from '../widgets/home-page/Roadmap';
@@ -22,7 +22,7 @@ export default function Home() {
       <Seller />
       <Winners />
       <Benefits />
-      <ContactForm />
+      <Contacts />
     </PageWrapper>
   );
 }

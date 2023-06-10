@@ -8,8 +8,8 @@ const Header: FC = () => {
 
   return (
     <div className="header-wrapper">
-      <header className="header max-w-7xl mx-auto flex justify-between items-center max-xl:px-10">
-        <h6 className="uppercase text-5xl logo">onyx</h6>
+      <header className="header max-w-[1360px] mx-auto flex justify-between items-center px-10">
+        <h6 className="uppercase text-4xl sm:text-5xl logo">onyx</h6>
 
         <Navbar className="max-xl:hidden" />
 

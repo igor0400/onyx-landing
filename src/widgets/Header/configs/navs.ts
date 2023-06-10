@@ -5,22 +5,18 @@ export const navs = [
   },
   {
     title: 'Возможности',
-    link: '/',
+    link: '/#features',
   },
   {
     title: 'Роадмап',
-    link: '/',
+    link: '/#roadmap',
   },
   {
     title: 'Функционал',
-    link: '/',
-  },
-  {
-    title: 'Тарифы',
-    link: '/',
+    link: '/#benefits',
   },
   {
     title: 'Контакты',
-    link: '/',
+    link: '/#contacts',
   },
 ];

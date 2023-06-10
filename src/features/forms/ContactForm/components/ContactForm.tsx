@@ -2,26 +2,52 @@ import React, { FC } from 'react';
 import { Button, Input } from '../../../../shared';
 import classNames from 'classnames';
 import Link from 'next/link';
+import { useMediaQuery } from '@chakra-ui/react';
 
 interface Props {
   className?: string;
 }
 
 const ContactForm: FC<Props> = ({ className }) => {
+  const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)');
+  const [isLargerThan350] = useMediaQuery('(min-width: 350px)');
+
   return (
     <form
       className={classNames('flex flex-col gap-6', {
         [className ?? '']: className,
       })}
     >
-      <div className="flex max-sm:flex-col gap-6">
+      <div
+        className={
+          isLargerThan1024
+            ? 'flex justify-between max-sm:flex-col gap-6'
+            : 'grid gap-6'
+        }
+        style={{
+          gridTemplateColumns: `repeat(auto-fit, minmax(${
+            isLargerThan350 ? '240px' : '1fr'
+          }, 1fr))`,
+        }}
+      >
         <Input placeholder="Введите имя" className="w-full sm:min-w-[240px]" />
         <Input
           placeholder="Введите город"
           className="w-full sm:min-w-[240px]"
         />
       </div>
-      <div className="flex max-sm:flex-col gap-6">
+      <div
+        className={
+          isLargerThan1024
+            ? 'flex justify-between max-sm:flex-col gap-6'
+            : 'grid gap-6'
+        }
+        style={{
+          gridTemplateColumns: `repeat(auto-fit, minmax(${
+            isLargerThan350 ? '240px' : '1fr'
+          }, 1fr))`,
+        }}
+      >
         <Input
           placeholder="Введите Email"
           type="email"
@@ -33,8 +59,21 @@ const ContactForm: FC<Props> = ({ className }) => {
           className="w-full sm:min-w-[240px]"
         />
       </div>
+
       <Input placeholder="Введите название клуба" className="w-full" />
-      <div className="flex max-sm:flex-col gap-6">
+
+      <div
+        className={
+          isLargerThan1024
+            ? 'flex justify-between max-sm:flex-col gap-6'
+            : 'grid gap-6'
+        }
+        style={{
+          gridTemplateColumns: `repeat(auto-fit, minmax(${
+            isLargerThan350 ? '240px' : '1fr'
+          }, 1fr))`,
+        }}
+      >
         <Input
           placeholder="Введите количество клубов"
           type="number"
@@ -46,6 +85,7 @@ const ContactForm: FC<Props> = ({ className }) => {
           className="w-full sm:min-w-[240px]"
         />
       </div>
+
       <Input placeholder="Коментарий" className="w-full" />
 
       <div className="text-center">

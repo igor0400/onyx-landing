@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { contacts } from '../configs/contacts';
 import ContactsCard from '../../../../entities/home-page/ContactsCard';
 
-const Contacts: FC = () => {
+const Cards: FC = () => {
   return (
-    <div className="flex flex-col gap-14">
+    <div className="flex lg:flex-col max-lg:flex-wrap max-lg:justify-center gap-14 mt-10">
       {contacts.map((item) => (
         <ContactsCard {...item} key={item.title} />
       ))}
@@ -12,4 +12,4 @@ const Contacts: FC = () => {
   );
 };
 
-export default Contacts;
+export default Cards;

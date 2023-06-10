@@ -6,13 +6,16 @@ export const winners = [
   {
     imageUrl: incubation,
     alt: 'incubation',
+    site: 'https://nuris.nu.edu.kz/incubation',
   },
   {
     imageUrl: quickstart,
     alt: 'quickstart',
+    site: 'https://nuris.nu.edu.kz/accelerator',
   },
   {
     imageUrl: jas,
     alt: 'jas',
+    site: 'https://jas.vc/index.php/ru/company',
   },
 ];
