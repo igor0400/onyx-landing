@@ -25,12 +25,10 @@ const ScreensCard: FC<Props> = ({
   const [isLargerThan1200] = useMediaQuery('(min-width: 1200px)');
   const [isLargerThan640] = useMediaQuery('(min-width: 640px)');
 
-  if (isLargerThan640) {
-    useAnimateOnScroll(
-      `#anim_screen_${float}_${id}`,
-      `animate__fadeIn${float === 'left' ? 'Right' : 'Left'}`,
-    );
-  }
+  useAnimateOnScroll(
+    `#anim_screen_${float}_${id}`,
+    `animate__fadeIn${float === 'left' ? 'Right' : 'Left'}`,
+  );
 
   return (
     <div
@@ -53,7 +51,7 @@ const ScreensCard: FC<Props> = ({
           <Image
             src={imageUrl}
             alt="screen"
-            id={`anim_screen_right_${id}`}
+            id={isLargerThan640 ? `anim_screen_right_${id}` : undefined}
             className="animate__animated animate__fast max-[1000px]:mr-auto"
             width={
               isLargerThan1400
@@ -83,7 +81,7 @@ const ScreensCard: FC<Props> = ({
           <Image
             src={imageUrl}
             alt="screen"
-            id={`anim_screen_left_${id}`}
+            id={isLargerThan640 ? `anim_screen_left_${id}` : undefined}
             className="animate__animated animate__fast max-[1000px]:ml-auto"
             width={
               isLargerThan1400
