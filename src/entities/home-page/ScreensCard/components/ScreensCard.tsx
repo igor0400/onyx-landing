@@ -25,10 +25,12 @@ const ScreensCard: FC<Props> = ({
   const [isLargerThan1200] = useMediaQuery('(min-width: 1200px)');
   const [isLargerThan640] = useMediaQuery('(min-width: 640px)');
 
-  useAnimateOnScroll(
-    `#anim_screen_${float}_${id}`,
-    `animate__fadeIn${float === 'left' ? 'Right' : 'Left'}`,
-  );
+  if (isLargerThan640) {
+    useAnimateOnScroll(
+      `#anim_screen_${float}_${id}`,
+      `animate__fadeIn${float === 'left' ? 'Right' : 'Left'}`,
+    );
+  }
 
   return (
     <div
