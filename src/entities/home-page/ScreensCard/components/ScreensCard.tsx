@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import React, { FC } from 'react';
 import { useAnimateOnScroll } from '../../../../shared';
-import { useMediaQuery } from '@chakra-ui/react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 interface Props {
   id: number;
@@ -21,9 +21,9 @@ const ScreensCard: FC<Props> = ({
   float,
   mt = true,
 }) => {
-  const [isLargerThan1400] = useMediaQuery('(min-width: 1400px)');
-  const [isLargerThan1200] = useMediaQuery('(min-width: 1200px)');
-  const [isLargerThan640] = useMediaQuery('(min-width: 640px)');
+  const isLargerThan1400 = useMediaQuery('(min-width: 1400px)');
+  const isLargerThan1200 = useMediaQuery('(min-width: 1200px)');
+  const isLargerThan640 = useMediaQuery('(min-width: 640px)');
 
   useAnimateOnScroll(
     `#anim_screen_${float}_${id}`,

@@ -2,15 +2,14 @@ import React, { FC } from 'react';
 import { slides } from '../configs/slides';
 import RoadmapSliderCard from '../../../../entities/home-page/RoadmapSliderCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useMediaQuery } from '@chakra-ui/react';
-
+import useMediaQuery from '@mui/material/useMediaQuery';
 import SlideArrows from './SlideArrows';
 
 const Slider: FC = () => {
-  const [isLargerThan1220] = useMediaQuery('(min-width: 1220px)');
-  const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)');
-  const [isLargerThan800] = useMediaQuery('(min-width: 800px)');
-  const [isLargerThan640] = useMediaQuery('(min-width: 640px)');
+  const isLargerThan1220 = useMediaQuery('(min-width: 1220px)');
+  const isLargerThan1024 = useMediaQuery('(min-width: 1024px)');
+  const isLargerThan800 = useMediaQuery('(min-width: 800px)');
+  const isLargerThan640 = useMediaQuery('(min-width: 640px)');
 
   return (
     <Swiper

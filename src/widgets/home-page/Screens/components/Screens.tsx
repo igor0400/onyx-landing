@@ -4,10 +4,10 @@ import ScreensCard from '../../../../entities/home-page/ScreensCard';
 
 import background from 'public/images/bg-lines.png';
 import backgroundBlur from 'public/images/bg-lines-blur.png';
-import { useMediaQuery } from '@chakra-ui/react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Screens: FC = () => {
-  const [isLargerThan1600] = useMediaQuery('(min-width: 1600px)');
+  const isLargerThan1600 = useMediaQuery('(min-width: 1600px)');
 
   return (
     <div

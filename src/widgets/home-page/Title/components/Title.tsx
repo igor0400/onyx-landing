@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import { useMediaQuery } from '@chakra-ui/react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import background from 'public/images/background.jpg';
 
 const Title: FC = () => {
-  const [isLargerThan1400] = useMediaQuery('(min-width: 1400px)');
+  const isLargerThan1400 = useMediaQuery('(min-width: 1400px)');
 
   return (
     <div

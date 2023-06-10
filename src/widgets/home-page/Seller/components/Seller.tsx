@@ -4,10 +4,10 @@ import background from 'public/images/bg-lines-seller.png';
 import backgroundBlur from 'public/images/bg-seller-blur.png';
 import backgroundScreens from 'public/images/bg-seller-screens.png';
 import SellerInput from '../../../../entities/home-page/SellerInput';
-import { useMediaQuery } from '@chakra-ui/react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const Seller: FC = () => {
-  const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)');
+  const isLargerThan1024 = useMediaQuery('(min-width: 1024px)');
 
   return (
     <div

@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import { Drawer } from 'antd';
 import { MenuIcon } from '../../../shared';
 
 import CloseIcon from '@mui/icons-material/Close';
 import Navbar from './Navbar';
 import Toolbar from './Toolbar';
+import { Drawer } from '@mui/material';
 
 interface Props {
   className?: string;
@@ -21,12 +21,9 @@ const Menu: FC<Props> = ({ isMenuOpen, setIsMenuOpen, className }) => {
       <MenuIcon className={className} onClick={onOpen} />
       <Drawer
         title="Навигация"
-        placement="right"
+        anchor="right"
         onClose={onClose}
         open={isMenuOpen}
-        style={{ background: '#14141c' }}
-        headerStyle={{ display: 'none' }}
-        width={320}
         className="xl:hidden"
       >
         <CloseIcon

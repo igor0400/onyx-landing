@@ -2,15 +2,15 @@ import React, { FC } from 'react';
 import { Button, Input } from '../../../../shared';
 import classNames from 'classnames';
 import Link from 'next/link';
-import { useMediaQuery } from '@chakra-ui/react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 interface Props {
   className?: string;
 }
 
 const ContactForm: FC<Props> = ({ className }) => {
-  const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)');
-  const [isLargerThan350] = useMediaQuery('(min-width: 350px)');
+  const isLargerThan1024 = useMediaQuery('(min-width: 1024px)');
+  const isLargerThan350 = useMediaQuery('(min-width: 350px)');
 
   return (
     <form

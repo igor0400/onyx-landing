@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app';
-
-import '../app/styles/global.scss';
 import Header from '../widgets/Header';
 import Footer from '../widgets/Footer';
+
+import '../app/styles/global.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

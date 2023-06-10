@@ -19,3 +19,11 @@
     height: $headerHeight425;
   }
 }
+
+.MuiPaper-root {
+  background: #14141c !important;
+  width: 320px !important;
+  color: #fff !important;
+  display: flex !important;
+  padding: 30px !important;
+}
