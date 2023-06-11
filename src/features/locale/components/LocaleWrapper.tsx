@@ -2,7 +2,7 @@ import React, { FC, ReactNode, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
 import { changeLang } from '../model/store/localeStore';
-import { locales } from '../configs/settings';
+import { defaultLocale, locales } from '../configs/settings';
 
 interface Props {
   children: ReactNode;
@@ -15,7 +15,7 @@ const LocaleWrapper: FC<Props> = ({ children }) => {
   useEffect(() => {
     const locale = localStorage.getItem('locale');
 
-    router.push(`/${locale}`);
+    router.push(`/${locale ?? defaultLocale}`);
   }, []);
 
   useEffect(() => {
