@@ -11,7 +11,7 @@ const Header: FC = () => {
 
   return (
     <div className="header-wrapper">
-      <header className="header max-w-[1360px] mx-auto flex justify-between items-center px-10">
+      <header className="header max-w-[1360px] mx-auto flex justify-between items-center px-5 sm:px-10">
         <Link href={`/${lang}`}>
           <h6 className="uppercase text-4xl sm:text-5xl logo">onyx</h6>
         </Link>
