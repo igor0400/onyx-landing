@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Button } from '../../../shared';
+import { Button, useTypedSelector } from '../../../shared';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
 import { useTranslate } from '../../../features/locale';
@@ -13,7 +13,7 @@ interface Props {
 const Toolbar: FC<Props> = ({ className }) => {
   const router = useRouter();
   const { t } = useTranslate(settings);
-  const lang = router.asPath.split('/')[1];
+  const lang = useTypedSelector((state) => state.locales.lang);
 
   const handleChangeLand = (lang: string) => {
     router.push(`/${lang}`);
