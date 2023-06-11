@@ -12,7 +12,7 @@ const PageWrapper: FC<Props> = ({ children, title, withMinMax = true }) => {
   return (
     <>
       <Head>
-        <meta name="theme-color" content="#14141c" />
+        <meta name="theme-color" content="#000000" />
         <meta property="og:url" content="https://onyx24.online" />
         <meta property="og:site_name" content="Onyx" />
         <link
