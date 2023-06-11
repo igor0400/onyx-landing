@@ -19,10 +19,6 @@ const nextConfing = {
       },
     ],
   },
-  i18n: {
-    locales: ['en', 'ru'],
-    defaultLocale: 'ru',
-  },
 };
 
 module.exports = nextConfing;

@@ -13,13 +13,19 @@ const LocaleWrapper: FC<Props> = ({ children }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const lang: any = router.locale;
+    const locale = localStorage.getItem('locale');
+
+    router.push(`/${locale}`);
+  }, []);
+
+  useEffect(() => {
+    const lang: any = router.asPath.split('/')[1];
 
     if (locales.includes(lang ?? '')) {
       dispatch(changeLang(lang ?? 'ru'));
       localStorage.setItem('locale', lang ?? 'ru');
     }
-  }, [router.locale]);
+  }, [router.asPath]);
 
   return <>{children}</>;
 };

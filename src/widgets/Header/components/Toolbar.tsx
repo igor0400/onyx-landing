@@ -13,9 +13,10 @@ interface Props {
 const Toolbar: FC<Props> = ({ className }) => {
   const router = useRouter();
   const { t } = useTranslate(settings);
+  const lang = router.asPath.split('/')[1];
 
   const handleChangeLand = (lang: string) => {
-    router.push('', '', { locale: lang });
+    router.push(`/${lang}`);
   };
 
   return (
@@ -23,8 +24,8 @@ const Toolbar: FC<Props> = ({ className }) => {
       <div className="flex gap-1 h-fit">
         <button
           className={classNames('', {
-            'opacity-50': router.locale !== 'en',
-            'font-semibold': router.locale === 'en',
+            'opacity-50': lang !== 'en',
+            'font-semibold': lang === 'en',
           })}
           onClick={() => handleChangeLand('en')}
         >
@@ -33,8 +34,8 @@ const Toolbar: FC<Props> = ({ className }) => {
         <span className="opacity-50">/</span>
         <button
           className={classNames('', {
-            'opacity-50': router.locale !== 'ru',
-            'font-semibold': router.locale === 'ru',
+            'opacity-50': lang !== 'ru',
+            'font-semibold': lang === 'ru',
           })}
           onClick={() => handleChangeLand('ru')}
         >
