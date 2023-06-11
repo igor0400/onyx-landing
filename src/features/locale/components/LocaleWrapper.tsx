@@ -14,6 +14,9 @@ const LocaleWrapper: FC<Props> = ({ children }) => {
 
   useEffect(() => {
     const locale = localStorage.getItem('locale');
+    const spPath = router.asPath.split('/');
+
+    if (spPath.length > 2) return;
 
     router.push(`/${locale ?? defaultLocale}`);
   }, []);

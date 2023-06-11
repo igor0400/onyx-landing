@@ -1,4 +1,5 @@
 import screen1 from 'public/images/screen-card1.png';
+import screen1En from 'public/images/screen-card1-en.png';
 import screen2 from 'public/images/screen-card2.png';
 import screen3 from 'public/images/screen-card3.png';
 import screen4 from 'public/images/screen-card4.png';
@@ -50,7 +51,7 @@ export default {
         title: 'Easy transition to our system',
         description:
           'Free migration to our system we will make by ourselves - we will transfer the profile of the client base of your club and all related parameters, such as balance, discount, privileges',
-        imageUrl: screen1,
+        imageUrl: screen1En,
         float: 'left',
       },
       {

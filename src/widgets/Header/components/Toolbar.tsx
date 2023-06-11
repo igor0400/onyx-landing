@@ -16,7 +16,7 @@ const Toolbar: FC<Props> = ({ className }) => {
   const lang = useTypedSelector((state) => state.locales.lang);
 
   const handleChangeLand = (lang: string) => {
-    router.push(`/${lang}`);
+    router.push(`/${lang}/${router.asPath.split('/').slice(2).join('/')}`);
   };
 
   return (
